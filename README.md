@@ -57,4 +57,4 @@ Aplicação web full stack desenvolvida para controle financeiro pessoal, com fo
 
 ---
 
-*Desenvolvido por [Seu Nome]*
+*Desenvolvido por [Whandger Wolffenbüttel]*
