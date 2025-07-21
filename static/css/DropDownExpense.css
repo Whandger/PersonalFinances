@@ -1,0 +1,131 @@
+.navbar2 {
+    overflow: hidden;
+    background-color: #ffffff;
+    max-width: 55vh;
+    min-width: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .top-row {
+    display: flex;
+    flex-direction: row; /* alinha dropdown + input lado a lado */
+    gap: 10px;
+    align-items: center;
+  }
+
+  .submit-btn {
+    width: fit-content;
+  }
+  
+  .navbar2 a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown2 {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown2 .dropbtn2 {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: #333;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    max-width: 14.8vh;
+    min-width: 14.8vh;
+  }
+  
+  .navbar2 a:hover, .dropdown2:hover .dropbtn2 {
+    background-color: #b8b8b8;
+  }
+  
+  .dropdown-content2 {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width:14.8vh;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    box-sizing: border-box;
+  }
+  
+  .dropdown-content2 a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: right;
+  }
+  
+  .dropdown-content2 a:hover {
+    background-color: #ddd;
+  }
+  
+  .dropdown2:hover .dropdown-content2 {
+    display: block;
+    
+  }
+  .dropbtn2:hover, .dropdown2:hover .dropbtn2 {
+    color: #000000;
+  }
+
+
+
+  .value-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .submit-btn {
+    width: 80px;
+    height: 40px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  textarea#observacao {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  /* Ajuste de espaçamento do botão enviar */
+  .submit-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: #333;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .sucesstext{
+    width: 100%;
+    height: 20%;
+    text-align: center;
+    color: #ffffff;
+    margin-top:10px;
+  }

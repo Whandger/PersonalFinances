@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registros</title>
+
+  <!-- Estilos gerais -->
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleIndex.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDown.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDownUser.css') }}">
+  <!-- Estilo específico desta página -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/Data.css') }}">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="headcont">
+      <div class="blank"></div>
+      <div class="Tittle"><h1>Data Base</h1></div>
+      <div class="user">
+        <div class="navbar1">
+          <div class="dropdown1">
+            <button class="dropbtn1" id="username">
+              <b>{{ username }}</b> <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content1" style="right:0">
+              <a href="#">Change Password</a>
+              <a href="{{ url_for('login.logout') }}" id="logoutbtn">Logout</a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <a href="{{ url_for('page.index') }}">Home</a>
+    <a href="#">Data</a>
+    <div class="dropdown">
+      <button class="dropbtn">Expenses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('page.expense') }}">Add expenses</a>
+        <a href="{{ url_for('page.income') }}">Add Income</a>
+        <a href="{{ url_for('page.chart') }}">Charts</a>
+      </div>
+    </div> 
+    <a href="{{ url_for('page.exceldata') }}">Excel import data</a>
+  </div>
+
+  <!-- Filtros para registros -->
+   <div>
+  <div id="filtroRegistros">
+    <button data-tipo="todos" class="active">All</button>
+    <button data-tipo="expense">Expenses</button>
+    <button data-tipo="income">Income</button>
+
+      <!-- Botão categoria para escolher -->
+        <button class="dropbtn">Search <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="./expense.html">Add expenses</a>
+          <a href="./Income.html">Add Income</a>
+          <a href="./chart.html">Charts</a>
+        </div>        
+      </div> 
+    </div>
+
+  </div>
+
+  <!-- Conteúdo -->
+ 
+  <table class="registro-tabela" id="tabelaRegistros">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Category</th>
+        <th>Observation</th>
+        <th>Value</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="pagination" id="pagination"></div>
+
+  <!-- Script separado -->
+  <script src="{{ url_for('static', filename='js/data.js') }}"></script>
+</body>
+</html>

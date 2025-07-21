@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(214, 214, 214);
+    width: 100%;
+    height: 100%;
+}
+
+header{
+    background: #ffffff;
+    height: 8vh;
+    top:0;left: 0;right: 0;
+    display: flex;
+    
+}
+
+div.headcont{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+    div.blank{
+        width: 22vh;
+        height: 8vh;
+        display: flex;
+    }
+
+
+div.Tittle{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.user{
+    width: 22vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    margin-top: 20px;
+    
+}
+
+
+h1{
+    font-size: 5vh;
+    user-select: none;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+main{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+div.value{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 55vh;
+    min-width: 55vh;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10vh 10vh 10vh 10vh;
+    top:13vh;
+}
+
+div.input{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 55vh;
+    height: 48vh;
+}
+
+div.form{
+    background-color: #333;
+    display: flex;
+    justify-content: center;
+    width: 55vh;
+    height: 50vh;
+    margin-top:2vh;
+    padding-top: 2vh;
+    border-radius: 0vh 0vh 10vh 10vh;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#btnAnalisar, #btnProcessar{
+    cursor: pointer;
+
+}

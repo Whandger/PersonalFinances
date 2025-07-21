@@ -1,0 +1,154 @@
+.registro-tabela {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+.registro-tabela th,
+.registro-tabela td {
+    border: 1px solid #ebebeb;
+    padding: 12px;
+    text-align: left;
+    padding-top: 9px;
+  padding-bottom: 7px;
+}
+
+.registro-tabela th {
+    background-color: #333333;
+    color: white;
+}
+
+/* Ajuste da largura da coluna ações */
+.registro-tabela th:last-child,
+.registro-tabela td:last-child {
+    width: 90px; /* ajuste conforme preferir */
+    text-align: center;
+    white-space: nowrap;
+}
+
+.titulo-registros {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.delete-btn, .view-btn {
+    font-weight: bold;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin-left: 5px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.delete-btn {
+    color: red;
+}
+
+.view-btn {
+    color: black;
+    font-weight: normal;
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background-color: #333;
+    color: white;
+}
+
+
+#filtroRegistros {
+    width: 90%;
+    margin: 20px auto 10px auto;
+    text-align: center;
+  }
+  
+  #filtroRegistros button {
+    margin: 0 6px;
+    padding: 8px 16px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  #filtroRegistros button:hover {
+    background-color: #ddd;
+  }
+  
+  #filtroRegistros button.active {
+    background-color: #333;
+    color: white;
+    border-color: #333;
+  }
+
+  td.select {
+    text-align: center;
+    padding: 8px;
+  }
+  
+  td.select input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+  }
+
+
+  .linha-par {
+    background-color: #ffffff;
+  }
+  
+  .linha-impar {
+    background-color: #f1f1f1;
+  }
+
+ /* Cores fixas antes do hover */
+.view-btn {
+    color: #1e3a8a; /* azul escuro */
+  }
+  
+  .delete-btn {
+    color: #c70000; /* vermelho */
+  }
+  
+  /* Estilo base dos botões */
+  .view-btn,
+  .delete-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+  
+  /* Estiliza a linha completa ao passar o mouse */
+  .linha-par:hover,
+  .linha-impar:hover {
+    background-color: #575757;
+    color: white;
+  }
+  
+  /* Altera a cor dos botões quando o mouse está sobre a linha */
+  .linha-par:hover .view-btn,
+  .linha-par:hover .delete-btn,
+  .linha-impar:hover .view-btn,
+  .linha-impar:hover .delete-btn {
+    color: white;
+  }
+
+ 

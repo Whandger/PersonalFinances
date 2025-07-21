@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleIndex.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDown.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDownUser.css') }}">
+  
+</head>
+
+<body>
+  
+  <header>
+    <div class="headcont">
+      <div class="blank"></div>
+      <div class="Tittle"><h1>Data Base</h1></div>
+      <div class="user">
+        <div class="navbar1">
+          <div class="dropdown1">
+            <button class="dropbtn1" id="username">
+              <b>{{ username }}</b> <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content1" style="right:0">
+              <a href="#">Change Password</a>
+              <a href="{{ url_for('login.logout') }}" id="logoutbtn">Logout</a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="{{ url_for('page.datavalue') }}">Data</a>
+    <div class="dropdown">
+      <button class="dropbtn">
+        Expenses
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('page.expense') }}">Add expenses</a>
+        <a href="{{ url_for('page.income') }}">Add Income</a>
+        <a href="{{ url_for('page.chart') }}">Charts</a>
+        
+      </div>
+    </div>
+  </div>
+  <p></p>
+  <input type="file" id="inputExcel" accept=".xlsx, .xls" />
+  <br/>
+  <label>Cell Expense: <input type="text" id="celExpense" placeholder="C14" /></label>
+  <label>Cell Income: <input type="text" id="celIncome" placeholder="G5" /></label>
+    <label for="dataBase">Data base (To import each file):</label>
+    <input type="date" id="dataBase" value="2025-#-01" />
+  <br/>
+  <button id="btnAnalisar">📊 See Excel</button>
+  <button id="btnProcessar">📤 Import Excel</button>
+  <pre id="output" style="margin-top:10px; background:#f4f4f4; padding:10px;"></pre>
+  
+  
+  <!-- IMPORTANTE: SheetJS -->
+  <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+  <script src="{{ url_for('static', filename='js/exceldata.js') }}"></script>
+  
+</body>
+</html>

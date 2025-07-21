@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expenses</title>
+  
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleIndex.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDown.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDownUser.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDownExpense.css') }}">
+</head>
+
+<body>
+  
+  <header>
+    <div class="headcont">
+      <div class="blank"></div>
+      <div class="Tittle"><h1>Expenses</h1></div>
+      <div class="user">
+        <div class="navbar1">
+          <div class="dropdown1">
+            <button class="dropbtn1" id="username">
+              <b>{{ username }}</b> <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content1" style="right:0">
+              <a href="#">Change Password</a>
+              <a href="{{ url_for('login.logout') }}" id="logoutbtn">Logout</a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <div class="navbar">
+    <a href="{{ url_for('page.index') }}">Home</a>
+    <a href="{{ url_for('page.datavalue') }}">Data</a>
+    <div class="dropdown">
+      <button class="dropbtn">Expenses <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="#">Add expenses</a>
+        <a href="{{ url_for('page.income') }}">Add Income</a>
+        <a href="{{ url_for('page.chart') }}">Charts</a>
+      </div>
+    </div> 
+  </div>
+
+  
+  <main>
+    <div class="value">
+      <h1>Add Expense</h1>
+      <div class="input">
+        <div class="form">
+          <form class="form">
+            <div class="navbar2">
+              <div class="top-row">
+                <div class="dropdown2">
+                  <button class="dropbtn2">
+                    <p id="p">Expenses</p>
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-content2">
+                    <a href="#" data-item="Month Expense">Month Expense</a>
+                    <a href="#" data-item="Geral Expense">Geral Expense</a>
+                    <a href="#" data-item="Market">Market</a>
+                    <a href="#" data-item="Present">Present</a>
+                  </div>
+                </div>
+              
+                <input type="number" class="value-input" id="valor" placeholder="R$" autocomplete="off">
+                <input type="date" id="data" class="date-input" placeholder="dd/mm/aaaa">
+              </div>
+              
+              <!-- Área grande para observação -->
+              <textarea id="observacao" placeholder="Write your observation here..." style="width: 100%; height: 80px; margin-top: 15px; resize: vertical;"></textarea>
+              
+              <button type="submit" class="submit-btn" id="enviar" style="margin-top: 15px;">Send</button>
+            
+            </div>
+            <div class="sucesstext"><h3 id="sucess"></h3></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script>const transactionUrl = "/data/transaction";</script>
+  <script src="{{ url_for('static', filename='js/expense.js') }}"></script>
+</body>
+</html>

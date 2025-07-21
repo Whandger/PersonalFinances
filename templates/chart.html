@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Chart</title>
+
+  <!-- Seus estilos -->
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/StyleIndex.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDown.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/DropDownUser.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/chart.css') }}" />
+
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Header padrão -->
+  <header>
+    <div class="headcont">
+      <div class="blank"></div>
+      <div class="Tittle"><h1>Data Chart</h1></div>
+      <div class="user">
+        <div class="navbar1">
+          <div class="dropdown1">
+            <button class="dropbtn1" id="username">
+              <b>{{ username }}</b> <i class="fa fa-caret-down"></i>
+          </button>
+            <div class="dropdown-content1" style="right:0">
+              <a href="#">Change Password</a>
+              <a href="{{ url_for('login.logout') }}" id="logoutbtn">Logout</a>
+            </div> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navegação -->
+  <div class="navbar">
+    <a href="{{ url_for('page.index') }}">Home</a>
+    <a href="{{ url_for('page.datavalue') }}">Data</a>
+    <div class="dropdown">
+      <button class="dropbtn">Expenses <i class="fa fa-caret-down"></i></button>
+      <div class="dropdown-content">
+        <a href="{{ url_for('page.expense') }}">Add expenses</a>
+        <a href="{{ url_for('page.income') }}">Add Income</a>
+        <a href="#">Charts</a>
+      </div>
+    </div> 
+  </div>
+
+
+  <!-- Conteúdo principal -->
+  <main>
+    <div class="period-box">
+      <div class="config-period">
+        <label for="dataInicio">From:</label>
+        <input type="month" id="dataInicio">
+        <label for="dataFim">To:</label>
+        <input type="month" id="dataFim">
+        <button id="btnAtualizar">Refresh</button>
+      </div>
+    </div>
+
+    <canvas id="chartCustos"></canvas>
+    
+  </main>
+
+  <!-- Script da lógica -->
+  <script src="{{ url_for('static', filename='js/chart.js')}}"></script>
+  
+</body>
+
+</html>
