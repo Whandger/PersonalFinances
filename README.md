@@ -152,3 +152,5 @@ python run.py
 Or execute the .bat archive
 
 Access http://localhost:5000 in your browser
+
+Desenvolvido por Whandger Wolffenbüttel
