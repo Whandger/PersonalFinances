@@ -2,6 +2,9 @@ Sistema Financeiro Pessoal / Personal Finance System
 Sistema Financeiro Pessoal
 Aplicação web full stack desenvolvida para controle financeiro pessoal, com foco em segurança, experiência do usuário e visualização de dados.
 
+📼 ## Video
+https://www.youtube.com/watch?v=bMIqVRQao1A&themeRefresh=1
+
 🛠️ Tecnologias Utilizadas
 Front-end: HTML, CSS, JavaScript (puro)
 
@@ -154,3 +157,4 @@ Or execute the .bat archive
 Access http://localhost:5000 in your browser
 
 Desenvolvido por Whandger Wolffenbüttel
+
